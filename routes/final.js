@@ -23,7 +23,7 @@ router.post('/', (req,res,next) => {
   //console.log(req.body.high_var);
 
   Responses.create(resp).then((response) => {
-    //console.log('Response Added', response)
+    console.log('Response Added', response)
     res.render('thankyou');
   }, (err) => next(err))
 
