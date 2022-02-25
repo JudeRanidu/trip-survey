@@ -1,0 +1,88 @@
+extends layout
+
+block content
+  div(class="container mt-3")
+    form(action="/scenario1" method="POST")
+      
+      div(class="mb-3")
+        h3 Interviewer's Details
+
+      div(class="bg-primary p-2 text-dark bg-opacity-25 mb-3")
+        div(class="mb-3")
+          h5 Your Age
+          div(class="row")
+            div(class="col-md-6 mb-2")
+              div(class="form-check")
+                input(class="form-check-input" type="radio" name="age" value="Under 15" required)
+                label(class="form-check-label") Under 15
+            div(class="col-md-6 mb-2")
+              div(class="form-check")
+                input(class="form-check-input" type="radio" name="age" value="15-25 years" required)
+                label(class="form-check-label") 15-25 years
+            div(class="col-md-6 mb-2")
+              div(class="form-check")
+                input(class="form-check-input" type="radio" name="age" value="25-35 years" required)
+                label(class="form-check-label") 25-35 years
+            div(class="col-md-6 mb-2")
+              div(class="form-check")
+                input(class="form-check-input" type="radio" name="age" value="35-45 years" required)
+                label(class="form-check-label") 35-45 years
+            div(class="col-md-6 mb-2")
+              div(class="form-check")
+                input(class="form-check-input" type="radio" name="age" value="Over 45" required)
+                label(class="form-check-label") Over 45
+
+        div(class="mb-3")
+          h5 Monthly Income
+          div(class="row")
+            div(class="col-md-6 mb-2")
+              div(class="form-check")
+                input(class="form-check-input" type="radio" name="income" value="No income" required)
+                label(class="form-check-label") No Income (Dependable)
+            div(class="col-md-6 mb-2")
+              div(class="form-check")
+                input(class="form-check-input" type="radio" name="income" value="Under 30" required)
+                label(class="form-check-label") Under 30,000/=
+            div(class="col-md-6 mb-2")
+              div(class="form-check")
+                input(class="form-check-input" type="radio" name="income" value="30-50" required)
+                label(class="form-check-label") 30,000/= to 50,000/=
+            div(class="col-md-6 mb-2")
+              div(class="form-check")
+                input(class="form-check-input" type="radio" name="income" value="50-100" required)
+                label(class="form-check-label") 50,000/= to 100,000/=
+            div(class="col-md-6 mb-2")
+              div(class="form-check")
+                input(class="form-check-input" type="radio" name="income" value="100-200" required)
+                label(class="form-check-label") 100,000/= to 200,000/=
+            div(class="col-md-6 mb-2")
+              div(class="form-check")
+                input(class="form-check-input" type="radio" name="income" value="Over 200" required)
+                label(class="form-check-label") Over 200,000/=
+
+        div(class="mb-3")
+          h5 Gender
+          div(class="row")
+            div(class="col-md-6 mb-2")
+              div(class="form-check")
+                input(class="form-check-input" type="radio" name="gender" value="Male" required)
+                label(class="form-check-label") Male
+            div(class="col-md-6 mb-2")
+              div(class="form-check")
+                input(class="form-check-input" type="radio" name="gender" value="Female" required)
+                label(class="form-check-label") Female
+
+      div(class="mb-3")
+        h3 Imagine a Trip with the following Characteristics to Complete the Survey!
+
+      div(class="bg-primary p-2 text-dark bg-opacity-25 mb-3")
+
+        div(class="card-body")
+            
+            p(class="card-text") #[b Distance of the Trip] - 30 km
+            p(class="card-text") #[b Approx. Time] - 1 hr 30 mins
+            p(class="card-text") #[b Approx. Fuel Efficiency] - 12 km/l
+            p(class="card-text") #[b Approx. Cost] - LKR #{cost}
+
+      div(class="mb-3")
+        button(type="submit" class="btn btn-primary mb-3") Next

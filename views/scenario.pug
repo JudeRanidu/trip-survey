@@ -1,0 +1,53 @@
+extends layout
+
+block content
+  div(class="container mt-5")
+    div(class="mb-3")
+        h2 #{title}
+        h3 Which ride do you select from A & B?
+
+    div(class="mb-3")
+        center 
+            h5 Starting Time - #{start} AM
+            h5 Arrival Time - #{arrival} AM
+
+    div(class="row")
+        div(class="col-md-6")
+            div(class="card bg-primary p-2 text-dark bg-opacity-25")
+                div(class="card-body")
+                    center    
+                        h5(class="card-title") #[b Ride A]
+                    
+                    h6 The probability of arriving on following times are equal
+                    p(class="card-text") Predicted Arrival Time - #[b #{A_arr_l} AM]
+                    p(class="card-text") Predicted Arrival Time - #[b #{arrival} AM]
+                    p(class="card-text") Predicted Arrival Time - #[b #{A_arr_h} AM]
+                    p(class="card-text") Cost - #[b LKR #{cost_high}]
+
+                    form(action=path method="POST")
+                        input(type="hidden" name="scenario" value="Ride A")
+                        input(type="hidden" name="info" value=info)
+                        input(type="hidden" name="choices" value=choices)
+                        input(type="hidden" name="low_var" value=low_var)
+                        input(type="hidden" name="high_var" value=high_var)
+                        button(type="submit" class="btn btn-primary") Select
+
+        div(class="col-md-6")
+            div(class="card bg-primary p-2 text-dark bg-opacity-25")
+                div(class="card-body")
+                    center 
+                        h5(class="card-title") #[b Ride B]
+                   
+                    h6 The probability of arriving on following times are equal
+                    p(class="card-text") Predicted Arrival Time - #[b #{B_arr_l} AM]
+                    p(class="card-text") Predicted Arrival Time - #[b #{arrival} AM]
+                    p(class="card-text") Predicted Arrival Time - #[b #{B_arr_h} AM]
+                    p(class="card-text") Cost - #[b LKR #{cost_low}]
+
+                    form(action=path method="POST")
+                        input(type="hidden" name="scenario" value="Ride B")
+                        input(type="hidden" name="info" value=info)
+                        input(type="hidden" name="choices" value=choices)
+                        input(type="hidden" name="low_var" value=low_var)
+                        input(type="hidden" name="high_var" value=high_var)
+                        button(type="submit" class="btn btn-primary") Select
