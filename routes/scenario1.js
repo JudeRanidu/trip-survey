@@ -13,6 +13,9 @@ router.post('/', (req,res,next) => {
     var low_var = [l_val];
     var high_var = [h_val];
 
+    var costs_A = [cost_high];
+    var costs_B = [cost_low];
+
     var A_arr = utils.processTime(l_val);
     var B_arr = utils.processTime(h_val);
 
@@ -20,6 +23,7 @@ router.post('/', (req,res,next) => {
         info: req.body, choices: '', low_var: low_var, high_var: high_var,
         cost_low: cost_low, cost_high: cost_high,
         start: config.start, arrival: config.arrival,
+        costs_A: costs_A, costs_B: costs_B,
         A_arr_l: A_arr[0], A_arr_h: A_arr[1], B_arr_l: B_arr[0], B_arr_h: B_arr[1]});
 });
 

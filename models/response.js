@@ -14,25 +14,105 @@ const responseSchema = new Schema({
         type: String,
         required: true
     },
-    scenario1: {
+    scn1_choice: {
         type: String,
         default: ''
     },
-    scenario2: {
+    scn1_TA_var: {
+        type: String,
+        required: true
+    },
+    scn1_TB_var: {
+        type: String,
+        required: true
+    },
+    scn1_TA_cost: {
+        type: String,
+        required: true
+    },
+    scn1_TB_cost: {
+        type: String,
+        required: true
+    },
+    scn2_choice: {
         type: String,
         default: ''
     },
-    scenario3: {
+    scn2_TA_var: {
+        type: String,
+        required: true
+    },
+    scn2_TB_var: {
+        type: String,
+        required: true
+    },
+    scn2_TA_cost: {
+        type: String,
+        required: true
+    },
+    scn2_TB_cost: {
+        type: String,
+        required: true
+    },
+    scn3_choice: {
         type: String,
         default: ''
     },
-    scenario4: {
+    scn3_TA_var: {
+        type: String,
+        required: true
+    },
+    scn3_TB_var: {
+        type: String,
+        required: true
+    },
+    scn3_TA_cost: {
+        type: String,
+        required: true
+    },
+    scn3_TB_cost: {
+        type: String,
+        required: true
+    },
+    scn4_choice: {
         type: String,
         default: ''
     },
-    scenario5: {
+    scn4_TA_var: {
+        type: String,
+        required: true
+    },
+    scn4_TB_var: {
+        type: String,
+        required: true
+    },
+    scn4_TA_cost: {
+        type: String,
+        required: true
+    },
+    scn4_TB_cost: {
+        type: String,
+        required: true
+    },
+    scn5_choice: {
         type: String,
         default: ''
+    },
+    scn5_TA_var: {
+        type: String,
+        required: true
+    },
+    scn5_TB_var: {
+        type: String,
+        required: true
+    },
+    scn5_TA_cost: {
+        type: String,
+        required: true
+    },
+    scn5_TB_cost: {
+        type: String,
+        required: true
     }
 }, {
     timestamps: true
